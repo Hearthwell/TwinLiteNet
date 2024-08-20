@@ -69,7 +69,10 @@ def train(args, train_loader, model, criterion, optimizer, epoch):
     pbar = tqdm(pbar, total=total_batches, bar_format='{l_bar}{bar:10}{r_bar}')
     for i, (_,input, target) in pbar:
         if args.onGPU == True:
-            input = input.cuda().float() / 255.0        
+            input = input.cuda().float() / 255.0
+        else:
+            input = input.float() / 255.0
+
         output = model(input)
         
         # target=target.cuda()
