@@ -1,3 +1,16 @@
+# Modifications July 2024
+
+- Added Quantize aware training 
+- Added Relu Activation Based Model
+- Pretrained weights for normal model qat and RELU model qat
+- Validation Script adapted to work with both pytorch and tflite models
+- Conversion notebooks for going from pytorch to tflite
+
+- export.ipynb: For converting base model
+- export_qat.ipynb: For converting QAT base model
+- export_qat_relu.ipynb: For converting QAT RELU model
+### The Number Of Calibration Images Used For The Static Quantization Greatly Affects The Performance Of Final Model. I Found The Best Results When Using Only One Calibration Image, But Can Be More Extensively Tested 
+
 # TwinLiteNet: An Efficient and Lightweight Model for Driveable Area and Lane Segmentation in Self-Driving Cars
 
 
